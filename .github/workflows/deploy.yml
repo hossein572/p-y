@@ -1,0 +1,58 @@
+name: Deploy پزشک‌یار to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: دریافت کد پروژه
+        uses: actions/checkout@v4
+
+      - name: نصب Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: نصب وابستگی‌ها
+        run: npm ci
+
+      - name: ساخت پروژه
+        run: npm run build
+
+      - name: ساخت fallback برای React Router
+        run: cp dist/index.html dist/404.html
+
+      - name: تنظیم GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: آپلود خروجی
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: انتشار روی GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

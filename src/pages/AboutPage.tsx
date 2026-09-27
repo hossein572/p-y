@@ -60,7 +60,7 @@ export function AboutPage() {
           </div>
         </div>
         <div className="overflow-hidden rounded-2xl border border-line shadow-card">
-          <img src="/images/about.jpg" alt="تیم پزشک‌یار در راهرو کلینیک" className="aspect-[4/3] w-full object-cover" />
+          <img src="/p-y/images/about.jpg" alt="تیم پزشک‌یار در راهرو کلینیک" className="aspect-[4/3] w-full object-cover" />
         </div>
       </div>
 

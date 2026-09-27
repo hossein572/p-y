@@ -49,7 +49,7 @@ export function SpecialtiesSection() {
         <div className="flex flex-col gap-4 lg:col-span-2">
           <div className="group relative overflow-hidden rounded-2xl border border-line shadow-card">
             <img
-              src="/images/specialty.jpg"
+              src="/p-y/images/specialty.jpg"
               alt="گوشه‌ای از کلینیکی مدرن با میز پزشک و استتوسکوپ"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"

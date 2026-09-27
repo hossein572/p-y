@@ -125,7 +125,7 @@ export function Hero() {
           <div className="relative animate-fade-up [animation-delay:120ms]">
             <div className="relative overflow-hidden rounded-2xl border border-line shadow-card">
               <img
-                src="/images/hero.jpg"
+                src="/p-y/images/hero.jpg"
                 alt="مذاکره پزشک با بیمار در کلینیکی روشن و مدرن"
                 className="aspect-[16/10] w-full object-cover sm:aspect-[4/3] lg:aspect-[4/5]"
               />

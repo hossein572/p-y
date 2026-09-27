@@ -1,0 +1,21 @@
+{
+  "name": "پزشک‌یار — رزرو آنلاین نوبت پزشکی",
+  "short_name": "پزشک‌یار",
+  "description": "پیدا کردن پزشک، بررسی سوابق و نظرات و رزرو آنلاین نوبت در چند دقیقه.",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5FAFD",
+  "theme_color": "#74B9E8",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

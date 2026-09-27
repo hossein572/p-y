@@ -1,0 +1,1 @@
+import{r as n,j as o,e as u}from"./index-C_wLK5_Y.js";function d(e=550,s=[]){const[a,t]=n.useState(!0);return n.useEffect(()=>{t(!0);const r=window.setTimeout(()=>t(!1),e);return()=>window.clearTimeout(r)},s),a}function c({className:e}){return o.jsx("div",{className:u("animate-pulse rounded-lg bg-line/60",e),"aria-hidden":!0})}export{c as S,d as u};

@@ -38,7 +38,7 @@ function PageFallback() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/p-y">
       <AppProvider>
         <Routes>
           <Route element={<Layout />}>

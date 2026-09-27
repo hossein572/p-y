@@ -8,12 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 );
-
-// Service Worker: فقط در production (برای نصب و حالت آفلاین)
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      /* ثبت SW اختیاری است؛ در صورت خطا نادیده گرفته می‌شود */
-    });
-  });
-}
